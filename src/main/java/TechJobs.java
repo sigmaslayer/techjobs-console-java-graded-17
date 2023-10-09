@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Created by LaunchCode
+ * Created by LaunchCode4
  */
 public class TechJobs {
 
@@ -119,6 +119,13 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+
+        String asterisks = "*****";
+        boolean results = true;
+
+
+        //Working on Implementing this printJobs Method
+
 
         System.out.println("printJobs is not implemented yet");
     }
