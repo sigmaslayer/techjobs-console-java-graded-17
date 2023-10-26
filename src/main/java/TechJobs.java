@@ -1,3 +1,5 @@
+import javax.swing.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -121,12 +123,21 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
         String asterisks = "*****";
-        boolean results = true;
+
+        if (!someJobs.isEmpty()) {
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println(asterisks);
+                for (String key : job.keySet()) {
+                    System.out.println(key + ": " + job.get(key));
+                }
+                System.out.println(asterisks + "\n");
+            }
+        } else  {
+            System.out.println("No Results");
+        }
 
 
-        //Working on Implementing this printJobs Method
 
 
-        System.out.println("printJobs is not implemented yet");
     }
 }
