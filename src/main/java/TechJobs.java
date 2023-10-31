@@ -1,10 +1,12 @@
+import javax.swing.*;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Created by LaunchCode
+ * Created by LaunchCode4
  */
 public class TechJobs {
 
@@ -58,7 +60,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.println("\nSearch term:");
+                System.out.print("\nSearch term:" + "\n");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -120,6 +122,22 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        String asterisks = "*****";
+
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        } else  {
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println("\n" + asterisks);
+                for (String key : job.keySet()) {
+                    System.out.println(key + ": " + job.get(key));
+                }
+                System.out.println(asterisks);
+            }
+        }
+
+
+
+
     }
 }
