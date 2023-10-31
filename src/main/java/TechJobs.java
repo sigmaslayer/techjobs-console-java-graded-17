@@ -60,7 +60,7 @@ public class TechJobs {
                 String searchField = getUserSelection("Search by:", columnChoices);
 
                 // What is their search term?
-                System.out.println("\nSearch term:");
+                System.out.print("\nSearch term:" + "\n");
                 String searchTerm = in.nextLine();
 
                 if (searchField.equals("all")) {
@@ -124,16 +124,16 @@ public class TechJobs {
 
         String asterisks = "*****";
 
-        if (!someJobs.isEmpty()) {
+        if (someJobs.isEmpty()) {
+            System.out.print("No Results");
+        } else  {
             for (HashMap<String, String> job : someJobs) {
-                System.out.println(asterisks);
+                System.out.println("\n" + asterisks);
                 for (String key : job.keySet()) {
                     System.out.println(key + ": " + job.get(key));
                 }
-                System.out.println(asterisks + "\n");
+                System.out.println(asterisks);
             }
-        } else  {
-            System.out.println("No Results");
         }
 
 
